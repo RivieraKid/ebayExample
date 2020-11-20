@@ -11,7 +11,9 @@ struct Result: Codable {
 
 // MARK: - FindItemsByKeywordsResponse
 struct FindItemsByKeywordsResponse: Codable {
-    let ack, version, timestamp: [String]
+    let ack: [String],
+    let version: [String]
+    let timestamp: [String]
     let searchResult: [SearchResult]
     let paginationOutput: [PaginationOutput]
     let itemSearchURL: [String]
@@ -19,7 +21,10 @@ struct FindItemsByKeywordsResponse: Codable {
 
 // MARK: - PaginationOutput
 struct PaginationOutput: Codable {
-    let pageNumber, entriesPerPage, totalPages, totalEntries: [String]
+    let pageNumber: [String]
+    let entriesPerPage: [String]
+    let totalPages: [String]
+    let totalEntries: [String]
 }
 
 // MARK: - SearchResult
@@ -35,7 +40,8 @@ struct SearchResult: Codable {
 
 // MARK: - Item
 struct Item: Codable {
-    let itemID, title: [String]
+    let itemID: [String]
+    let title: [String]
     let globalID: [GlobalID]
     let primaryCategory: [AryCategory]
     let galleryURL: [String]?
@@ -50,7 +56,8 @@ struct Item: Codable {
     let listingInfo: [ListingInfo]
     let returnsAccepted: [String]
     let condition: [Condition]?
-    let isMultiVariationListing, topRatedListing: [String]
+    let isMultiVariationListing: [String]
+    let topRatedListing: [String]
     let paymentMethod: [PaymentMethod]?
     let subtitle: [String]?
     let galleryPlusPictureURL: [String]?
@@ -97,7 +104,9 @@ enum Country: String, Codable {
 // MARK: - DiscountPriceInfo
 struct DiscountPriceInfo: Codable {
     let originalRetailPrice: [OriginalRetailPrice]
-    let pricingTreatment, soldOnEbay, soldOffEbay: [String]
+    let pricingTreatment: [String]
+    let soldOnEbay: [String]
+    let soldOffEbay: [String]
 }
 
 // MARK: - OriginalRetailPrice
@@ -121,11 +130,15 @@ enum GlobalID: String, Codable {
 
 // MARK: - ListingInfo
 struct ListingInfo: Codable {
-    let bestOfferEnabled, buyItNowAvailable, startTime, endTime: [String]
+    let bestOfferEnabled: [String]
+    let buyItNowAvailable: [String]
+    let startTime: [String]
+    let endTime: [String]
     let listingType: [ListingType]
     let gift: [String]
     let watchCount: [String]?
-    let buyItNowPrice, convertedBuyItNowPrice: [OriginalRetailPrice]?
+    let buyItNowPrice: [OriginalRetailPrice]?
+    let convertedBuyItNowPrice: [OriginalRetailPrice]?
 }
 
 enum ListingType: String, Codable {
@@ -181,7 +194,8 @@ enum TypeEnum: String, Codable {
 
 // MARK: - SellingStatus
 struct SellingStatus: Codable {
-    let currentPrice, convertedCurrentPrice: [OriginalRetailPrice]
+    let currentPrice: [OriginalRetailPrice]
+    let convertedCurrentPrice: [OriginalRetailPrice]
     let sellingState: [SellingState]
     let timeLeft: [String]
     let bidCount: [String]?
@@ -196,7 +210,9 @@ struct ShippingInfo: Codable {
     let shippingServiceCost: [OriginalRetailPrice]?
     let shippingType: [ShippingType]
     let shipToLocations: [ShipToLocation]
-    let expeditedShipping, oneDayShippingAvailable, handlingTime: [String]
+    let expeditedShipping: [String]
+    let oneDayShippingAvailable: [String]
+    let handlingTime: [String]
 }
 
 enum ShipToLocation: String, Codable {
