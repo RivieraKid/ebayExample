@@ -11,7 +11,7 @@ struct Result: Codable {
 
 // MARK: - FindItemsByKeywordsResponse
 struct FindItemsByKeywordsResponse: Codable {
-    let ack: [String],
+    let ack: [String]
     let version: [String]
     let timestamp: [String]
     let searchResult: [SearchResult]
