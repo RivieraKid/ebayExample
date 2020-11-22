@@ -175,6 +175,7 @@ enum CategoryName: String, Codable {
     case tradingCardSingles = "Trading Card Singles"
     case videoGames = "Video Games"
     case antiquarianAndCollectible = "Antiquarian & Collectible"
+    case sealedTradingCardPacks = "Sealed Trading Card Packs"
 }
 
 // MARK: - ProductID
